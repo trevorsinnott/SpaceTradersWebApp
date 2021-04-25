@@ -1,0 +1,61 @@
+@use './sass/abstracts/mixins' as mixIns;
+@use './sass/abstracts/variables' as vars;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  //define 1 rem
+  font-size: 62.5%; //1rem = 10px
+
+  @include mixIns.respond(tab-land) {
+    font-size: 56.25%; //1rem = 9px eg. 9 / 16 = 56.25%
+  }
+
+  @include mixIns.respond(tab-port) {
+    font-size: 50%; //1rem = 8px eg. 8 / 16 = 50%
+  }
+
+  @include mixIns.respond(big-desktop) {
+    font-size: 75%; //1rem = 12px eg. 12 / 16 = 75%
+  }
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: vars.$color-light-primary;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: vars.$color-dark-primary;
+    color: vars.$color-light-primary;
+  }
+
+  body.light-theme {
+    background-color: vars.$color-light-primary;
+    color: vars.$color-black;
+  }
+}
+
+body.dark-theme {
+  background-color: vars.$color-dark-primary;
+  color: vars.$color-light-primary;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

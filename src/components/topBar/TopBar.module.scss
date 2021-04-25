@@ -1,0 +1,31 @@
+@use '../../sass/abstracts/variables' as vars;
+
+.navBar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  font-size: 2.5rem;
+  background-color: vars.$nav-bg;
+}
+
+a.homeNav,
+a.navItem {
+  color: vars.$nav-nav-color;
+}
+
+.homeNav,
+.navItem {
+  text-decoration: none;
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+a.activeNavItem {
+  color: vars.$nav-nav-active-color;
+}
