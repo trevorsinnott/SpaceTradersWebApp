@@ -1,7 +1,7 @@
 import { Route, Switch } from 'react-router-dom';
-import TopBar from 'components/topBar/TopBar';
-import Home from 'container/Home';
-import Other from 'container/Other';
+import TopBar from './components/topBar/TopBar';
+import Home from './container/Home';
+import Other from './container/Other';
 
 const App: React.FC = () => (
   <div className="container">

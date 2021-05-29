@@ -1,0 +1,8 @@
+{
+  "recomendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "alexkrechik.cucumberautocomplete",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}
