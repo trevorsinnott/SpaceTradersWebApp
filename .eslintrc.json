@@ -29,6 +29,19 @@
     "react/prop-types": [0],
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/cucumber/**/*.*",
+          "**/mocks/**/*.*",
+          "**/*.test.*",
+          "**/*.spec.*",
+          "**/*.steps.*"
+        ]
+      }
+    ],
     "no-use-before-define": "off",
     "import/extensions": [
       "error",
