@@ -7,7 +7,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "start": "webpack serve --mode development",
-    "test:bdd": "jest --setupFileAfterEnv='./src/cucumber/setupTest.ts' --testMatch='**/*.steps.*' --watch",
+    "test:bdd": "jest --setupFilesAfterEnv='./src/cucumber/setupTests.ts' --testMatch='**/*.steps.*' --watch",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
